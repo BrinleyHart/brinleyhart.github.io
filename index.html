@@ -72,7 +72,7 @@
   .team-section {
     background: #081f38;
     color: #ffffff;
-    padding: 65px 20px;
+    padding: 35px 20px;
   }
   .team-wrap {
     max-width: 1120px;
@@ -97,8 +97,8 @@
     font-style: italic;
   }
   .team-group {
-    margin-top: 35px;
-  }
+    margin-top: 20px;
+}
   .team-group h3 {
     color: #78c4f0;
     margin-bottom: 16px;
@@ -106,17 +106,20 @@
   }
   .team-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
   }
+  .team-group:last-of-type .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
   .team-card {
     background: #123653;
-    padding: 24px;
+    padding: 14px;
     border-radius: 10px;
     min-width: 0;
   }
   .team-card.featured {
-    grid-column: 1 / -1;
+    grid-column: auto;
   }
   .team-card .team-role {
     color: #c5a061;
@@ -146,16 +149,17 @@
   .team-divider {
     border: 0;
     border-top: 1px solid #35516b;
-    margin: 35px 0;
+    margin: 20px 0;
   }
   @media (max-width: 700px) {
-    .team-grid {
-      grid-template-columns: 1fr;
+    .team-grid,
+    .team-group:last-of-type .team-grid {
+        grid-template-columns: 1fr;
     }
     .team-card.featured {
-      grid-column: auto;
+        grid-column: auto;
     }
-  }
+}
 </style>
 
 <section class="team-section" id="team">
@@ -174,7 +178,7 @@
           <div class="team-role">Varsity Head Coach</div>
           <h4>Becky Yarbrough</h4>
           <div class="team-highlight">2025–26 State Champion • Coach of the Year</div>
-          <p>A veteran coach with more than 30 years of experience and a history of championship success. She guided Pulaski Academy to the 2024–25 state championship game and the 2025–26 state title, earning Coach of the Year honors.</p>
+          <p><p>30+ years of coaching excellence. Led Pulaski Academy to the 2025–26 state championship and earned Coach of the Year honors.</p></p>
           <a href="mailto:becky.yarbrough@pulaskiacademy.org">becky.yarbrough@pulaskiacademy.org</a>
         </div>
 
@@ -182,7 +186,7 @@
           <div class="team-role">Jr. High Head Coach</div>
           <h4>Robert Dallimore</h4>
           <div class="team-highlight">Two-Time State Champion</div>
-          <p>Won back-to-back state championships at Christian Life Academy in 2003 and 2004. Brings extensive high school and collegiate coaching experience, including ULM, Little Rock, and Ouachita Baptist.</p>
+          <p>Two-time state champion (2003, 2004) with extensive high school and collegiate coaching experience, including ULM, Little Rock, and Ouachita Baptist.</p>
           <a href="mailto:robert.dallimore@pulaskiacademy.org">robert.dallimore@pulaskiacademy.org</a>
         </div>
 
@@ -190,7 +194,9 @@
           <div class="team-role">Assistant Coach</div>
           <h4>Whitney Frazier</h4>
           <div class="team-highlight">Division I Standout • Former Professional Player</div>
-          <p>A 2011 Class 6A state champion, former Louisiana Tech standout, and professional player. Her coaching experience includes leading Camden Fairview back to state tournament competition.</p>
+          
+<p>2011 Class 6A state champion, former Louisiana Tech Division I standout, and professional basketball player. Former Camden Fairview head coach.</p>
+
           <a href="mailto:whitney.frazier@pulaskiacademy.org">whitney.frazier@pulaskiacademy.org</a>
         </div>
 
@@ -207,7 +213,7 @@
           <div class="team-role">Brin's Primary AAU Coach • Most Recent Season</div>
           <h4>Aidan Lee</h4>
           <div class="team-highlight">Arkansas Banshees | Head Coach</div>
-          <p>Served as Brin's primary Arkansas Banshees coach during her most recent season. Emphasizes purposeful repetitions, skill development, competitiveness, and a strong team culture.</p>
+          <p>Brin's primary AAU coach during her most recent season. Focuses on purposeful repetitions, skill development, competitiveness, and team culture.</p>
           <a href="mailto:aidannlee22@gmail.com">aidannlee22@gmail.com</a>
         </div>
 
@@ -215,14 +221,15 @@
           <div class="team-role">AAU Head Coach</div>
           <h4>Heather Healy</h4>
           <div class="team-highlight">Arkansas Banshees</div>
-          <p>A leader in the Banshees program who emphasizes teamwork, skill development, community engagement, and the supportive #BansheeFam culture.</p>
+          <p>Arkansas Banshees AAU head coach focused on player development, teamwork, and #BansheeFam culture. Leads her own team while supporting other Banshees teams.</p>
+
         </div>
 
         <div class="team-card">
           <div class="team-role">AAU Head Coach</div>
           <h4>Allie Banks</h4>
           <div class="team-highlight">Mt. Vernon-Enola Girls Head Coach</div>
-          <p>Brings collegiate and high school coaching experience, including Arkansas-Monticello, with a focus on defensive excellence, strong player relationships, and athlete development.</p>
+          <p>Mt. Vernon-Enola girls basketball head coach with high school and collegiate coaching experience, including Arkansas-Monticello. Focuses on player development and defensive excellence.</p>
         </div>
 
       </div>
@@ -231,28 +238,24 @@
     <hr class="team-divider">
 
     <div class="team-group">
-      <h3>Mentorship &amp; Player Development</h3>
+      <h3>Mentorship, Training &amp; Athletic Development</h3>
       <div class="team-grid">
         <div class="team-card featured">
           <div class="team-role">Basketball Mentor • Trainer • Big Sis</div>
           <h4>Bre'Amber Scott</h4>
-          <div class="team-highlight">Former Division I &amp; International Professional Player</div>
-          <p>With collegiate basketball experience at Mississippi State and Texas Tech and professional experience overseas, including Akari Sparks, Bre'Amber provides Brin with basketball guidance, encouragement, training, and mentorship as a big sister figure.</p>
+       <div class="team-highlight">Current International Professional Player • Former Division I Athlete</div>
+<p>Current international professional basketball player with Division I experience at Mississippi State and Texas Tech. Bre'Amber mentors and trains Brin, offering guidance, encouragement, and big-sister support.</p>
         </div>
-      </div>
-    </div>
 
-    <hr class="team-divider">
 
-    <div class="team-group">
-      <h3>Athletic Development &amp; Recovery</h3>
-      <div class="team-grid">
+
+    
         <div class="team-card featured">
           <div class="team-role">Certified Personal Trainer</div>
           <h4>Alysha Colvin, CPT</h4>
           <div class="team-highlight">Stretch &amp; Recovery Specialist • Strength &amp; Conditioning Coach</div>
           <p><strong>Workharder Recovery | Relentless Performance Training</strong></p>
-          <p>Supports Brin's athletic development through stretching, recovery, strength, and conditioning, helping her build mobility, physical preparation, and consistent recovery habits.</p>
+          <p>Supports Brin's athletic development through stretching, recovery, strength, and conditioning to improve mobility, performance, and injury prevention.</p>
           <a href="mailto:acolvin793@gmail.com">acolvin793@gmail.com</a>
         </div>
       </div>
