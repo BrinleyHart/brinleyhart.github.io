@@ -85,6 +85,11 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
   height: 100%;
 }
 
+ /* Remove gold dots from AAU tournament cards */
+#journey .aau-results .event::before,
+#journey .aau-results .event::after {
+    display: none;
+} 
 /* Stack cards on phones */
 @media (max-width: 650px) {
   #journey .aau-results {
