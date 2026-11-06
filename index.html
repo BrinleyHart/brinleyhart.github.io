@@ -96,6 +96,71 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
     grid-template-columns: 1fr;
   }
 }
+/* BRIN'S COLLEGE-STYLE GAME SCHEDULE */
+#brin-game-schedule {
+  display: block;
+  width: 100%;
+  border-collapse: separate;
+  color: #061f38;
+}
+
+#brin-game-schedule thead {
+  display: none;
+}
+
+#brin-game-schedule tbody {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+#brin-game-schedule tbody tr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  color: #061f38;
+  border: 1px solid #e0e5eb;
+  border-radius: 16px;
+  padding: 24px 18px;
+  text-align: center;
+  min-width: 0;
+}
+
+#brin-game-schedule tbody td {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  color: #061f38;
+}
+
+#brin-game-schedule tbody td:nth-child(2) > div {
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 0 !important;
+}
+
+#brin-game-schedule tbody td:nth-child(2) img {
+  width: 76px !important;
+  height: 76px !important;
+  object-fit: contain;
+}
+
+#brin-game-schedule tbody td:first-child {
+  font-weight: 700;
+  color: #061f38;
+}
+
+#brin-game-schedule tbody td a {
+  color: #176eaa !important;
+}
+
+@media (max-width: 700px) {
+  #brin-game-schedule tbody {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </style></head><body>
 <header>
@@ -422,7 +487,7 @@ margin: 5px 0;
       <p style="text-align:center;font-size:13px;color:#e4eaf0;">All game times Central Standard Time (CST)</p>
 
       <div style="overflow-x:auto;margin-top:25px;">
-        <table style="width:100%;border-collapse:collapse;color:white;font-size:14px;">
+<table id="brin-game-schedule" style="width:100%;border-collapse:collapse;color:white;font-size:14px;">
           <thead>
             <tr style="color:#c5a061;border-bottom:2px solid #c5a061;text-align:left;">
               <th style="padding:12px 8px;">DATE</th>
