@@ -100,7 +100,6 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
 #brin-game-schedule {
   display: block;
   width: 100%;
-  border-collapse: separate;
   color: #061f38;
 }
 
@@ -111,45 +110,91 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
 #brin-game-schedule tbody {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 #brin-game-schedule tbody tr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #ffffff;
+  background: #fff;
   color: #061f38;
-  border: 1px solid #e0e5eb;
+  border: 1px solid #e1e5ea;
   border-radius: 16px;
-  padding: 24px 18px;
+  padding: 18px 22px;
   text-align: center;
   min-width: 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
 }
 
 #brin-game-schedule tbody td {
   display: block;
   width: 100%;
-  padding: 8px 0;
+  padding: 6px 0;
   border: none;
   color: #061f38;
+  box-sizing: border-box;
+}
+
+#brin-game-schedule tbody td:first-child {
+  order: 2;
+  font-weight: 700;
+  font-size: 15px;
+  border-top: 1px solid #e9edf1;
+  padding-top: 14px;
+  margin-top: 10px;
+}
+
+#brin-game-schedule tbody td:nth-child(2) {
+  order: 1;
+  font-size: 16px;
+  font-weight: 700;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #brin-game-schedule tbody td:nth-child(2) > div {
-  justify-content: center;
-  flex-wrap: wrap;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+  gap: 14px !important;
+  width: 100%;
   min-width: 0 !important;
 }
 
 #brin-game-schedule tbody td:nth-child(2) img {
-  width: 76px !important;
-  height: 76px !important;
+  width: 90px !important;
+  height: 90px !important;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
-#brin-game-schedule tbody td:first-child {
+#brin-game-schedule tbody td:nth-child(2) span {
+  font-size: 14px;
   font-weight: 700;
-  color: #061f38;
+  white-space: normal !important;
+}
+
+#brin-game-schedule tbody td:nth-child(3) {
+  order: 3;
+  color: #65717e;
+  font-size: 13px;
+}
+
+#brin-game-schedule tbody td:nth-child(4) {
+  order: 4;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#brin-game-schedule tbody td:nth-child(5) {
+  order: 5;
+}
+
+#brin-game-schedule tbody td:nth-child(6) {
+  order: 6;
 }
 
 #brin-game-schedule tbody td a {
@@ -159,6 +204,11 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
 @media (max-width: 700px) {
   #brin-game-schedule tbody {
     grid-template-columns: 1fr;
+  }
+
+  #brin-game-schedule tbody td:nth-child(2) img {
+    width: 70px !important;
+    height: 70px !important;
   }
 }
 </style>
