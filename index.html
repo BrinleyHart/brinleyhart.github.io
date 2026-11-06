@@ -255,19 +255,63 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
     height: 70px !important;
   }
 }
+
+/* WORDS OF ENCOURAGEMENT SPORTS TICKER */
+
+#encouragement-ticker {
+  overflow: hidden;
+}
+
+.encouragement-track {
+  display: flex;
+  width: max-content;
+  gap: 50px;
+  animation: brinTicker 30s linear infinite;
+}
+
+.encouragement-track:hover {
+  animation-play-state: paused;
+}
+
+.encouragement-message {
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@keyframes brinTicker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .encouragement-track {
+    animation: none;
+  }
+}
 </style>
 </style></head><body>
 <header>
   <div class="nav">
     
 <a class="brand" href="#home">BH <span style="font-family:Arial,sans-serif;font-size:10px;font-style:normal;letter-spacing:1px;">CLASS OF 2031</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#home">HOME</a>
-      <a href="#about">ABOUT</a>
-      <a href="#film">FILM</a>
-      <a href="#highlights">HIGHLIGHTS</a>
-      <a href="#journey">JOURNEY</a>
-      <a href="#contact">CONTACT</a>
+   <nav aria-label="Main navigation">
+  <a href="#home">HOME</a>
+  <a href="#about">ABOUT</a>
+  <a href="#film">GAME SCHEDULE &amp; FILM</a>
+  <a href="#highlights">HIGHLIGHTS</a>
+  <a href="#journey">JOURNEY</a>
+  <a href="#follow">FOLLOW</a>
+  <a href="#contact">CONTACT</a>
       <a href="https://www.youtube.com/@BrinHartBasketball"
    target="_blank"
    rel="noopener noreferrer"
@@ -1251,7 +1295,154 @@ Watch games as they happen, then return to the schedule above to replay full-gam
   </div>
 </div><div class="gallery"><div class="placeholder">REAL SCHOOL TEAM PHOTO<br>Lady Bruins</div><div class="placeholder">REAL AAU TEAM PHOTO<br>Banshees</div><div class="placeholder">REAL TOURNAMENT / TEAM MEMORY PHOTO</div></div></div></section>
   <div style="height:3px;background:#c5a061;width:100%;"></div>
-<section id="contact" style="background-color:#e6f3fb;background-image:repeating-linear-gradient(135deg,transparent 0px,transparent 38px,rgba(120,196,240,0.25) 39px,transparent 40px);"><div class="wrap"><div class="section-title"><h2>CONTACT</h2><p class="script">Get in Touch</p></div><div class="contact"><div class="contact-box" style="border-radius:16px;padding:35px;"><h3 style="font-size:30px;letter-spacing:1px;color:#ffffff;">LET'S CONNECT</h3>
+<!-- FOLLOW BRIN'S JOURNEY -->
+<section id="follow" style="background:#f4f9fd;padding:75px 24px;">
+  <div class="wrap">
+
+    <div class="section-title">
+      <h2>FOLLOW <span>BRIN'S JOURNEY</span></h2>
+      <p class="script">Every Step. Every Game. Every Milestone.</p>
+    </div>
+
+    <div style="max-width:900px;margin:0 auto;">
+
+      <!-- WORDS OF ENCOURAGEMENT -->
+      <div style="background:#071f38;border-radius:16px;padding:35px 25px;text-align:center;margin-bottom:25px;">
+
+        <div style="color:#d5a651;font-size:30px;">&#9825;</div>
+
+        <h3 style="color:white;font-size:26px;margin:10px 0;">
+          Words of Encouragement
+        </h3>
+
+        <p style="color:#b8d8ef;font-size:15px;line-height:1.7;">
+          Every word of support is part of the journey.
+        </p>
+
+        <div id="encouragement-ticker"
+             style="background:#20466d;border-radius:10px;padding:22px;margin:25px 0;overflow:hidden;">
+
+          <div class="encouragement-track">
+  <span class="encouragement-message">
+    💙 Keep working hard, Brin! Your future is bright!
+  </span>
+
+  <span class="encouragement-message">
+    🏀 Stay focused, trust God, and enjoy the journey!
+  </span>
+
+  <span class="encouragement-message">
+    ⭐ Every game is another opportunity to grow!
+  </span>
+
+  <span class="encouragement-message">
+    💙 Keep working hard, Brin! Your future is bright!
+  </span>
+
+  <span class="encouragement-message">
+    🏀 Stay focused, trust God, and enjoy the journey!
+  </span>
+
+  <span class="encouragement-message">
+    ⭐ Every game is another opportunity to grow!
+  </span>
+</div>
+
+        </div>
+
+        <p style="color:#b8d8ef;font-size:13px;">
+          Share a little encouragement for Brin as she continues her basketball journey.
+        </p>
+
+        <details style="margin-top:20px;text-align:center;">
+  <summary style="display:inline-block;background:#78c4f0;color:#071f38;padding:14px 22px;border-radius:8px;font-weight:bold;cursor:pointer;">
+    Leave Brin Some Encouragement
+  </summary>
+
+  <form action="https://formspree.io/f/xkjjeazj"
+        method="POST"
+        style="max-width:500px;margin:25px auto 0;text-align:left;">
+
+    <label for="encouragement-name" style="color:white;">Your Name</label>
+    <input id="encouragement-name" type="text" name="name"
+           placeholder="Your Name" required maxlength="80"
+           style="width:100%;padding:14px;margin:8px 0 18px;box-sizing:border-box;border-radius:6px;border:0;">
+
+    <label for="encouragement-message" style="color:white;">Your Encouragement</label>
+    <textarea id="encouragement-message" name="message"
+              placeholder="Write a message for Brin..."
+              rows="5" required maxlength="1000"
+              style="width:100%;padding:14px;margin:8px 0 18px;box-sizing:border-box;border-radius:6px;border:0;"></textarea>
+
+    <input type="hidden" name="subject" value="New Words of Encouragement for Brin">
+
+    <button type="submit"
+            style="background:#d5a651;color:#071f38;padding:14px 25px;border:0;border-radius:8px;font-weight:bold;cursor:pointer;width:100%;">
+      SEND ENCOURAGEMENT 💙
+    </button>
+
+    <p style="color:#b8d8ef;font-size:12px;text-align:center;line-height:1.6;">
+      Your message will be sent privately for review.
+      Only approved messages may appear on Brin's website.
+    </p>
+
+  </form>
+</details>
+
+      </div>
+
+      <!-- EXPANDABLE ENCOURAGEMENT WALL -->
+<details style="background:#ffffff;border:1px solid #d5a651;border-radius:12px;padding:20px;margin-bottom:25px;text-align:center;">
+
+  <summary style="color:#071f38;font-weight:bold;font-size:17px;cursor:pointer;">
+    💙 View All Encouragement
+  </summary>
+
+  <div id="approved-encouragement"
+       style="max-height:350px;overflow-y:auto;margin-top:20px;text-align:left;">
+
+    <p style="color:#536779;text-align:center;font-style:italic;">
+      Approved messages from Brin's supporters will appear here soon!
+    </p>
+
+  </div>
+
+</details>
+<!-- END EXPANDABLE ENCOURAGEMENT WALL -->
+      
+      <!-- EMAIL AND YOUTUBE -->
+      <div style="background:white;border:1px solid #d5a651;border-radius:16px;padding:35px 25px;text-align:center;">
+
+        <div style="color:#d5a651;font-size:30px;">&#9993;</div>
+
+        <h3 style="color:#071f38;font-size:26px;margin:10px 0;">
+          Stay Connected
+        </h3>
+
+        <p style="color:#536779;font-size:15px;line-height:1.7;">
+          Follow Brin's basketball journey for game updates,
+          livestreams, highlights, and special milestones.
+        </p>
+
+        <p style="color:#071f38;font-weight:bold;margin-top:20px;">
+          Email Updates Coming Soon
+        </p>
+
+        <a href="https://www.youtube.com/@BrinHartBasketball"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="display:inline-block;background:#071f38;color:white;padding:14px 25px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:12px;">
+          Subscribe on YouTube
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- END FOLLOW SECTION -->
+  
+  <section id="contact" style="background-color:#e6f3fb;background-image:repeating-linear-gradient(135deg,transparent 0px,transparent 38px,rgba(120,196,240,0.25) 39px,transparent 40px);"><div class="wrap"><div class="section-title"><h2>CONTACT</h2><p class="script">Get in Touch</p></div><div class="contact"><div class="contact-box" style="border-radius:16px;padding:35px;"><h3 style="font-size:30px;letter-spacing:1px;color:#ffffff;">LET'S CONNECT</h3>
 
 <div style="width:65px;height:3px;background:#c5a061;margin:12px 0 20px;"></div>
 
