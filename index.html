@@ -371,14 +371,73 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
     </div>
   </div>
 
-<section style="background:#061f38;padding:38px 20px;text-align:center;">
-  <p style="font-family:Georgia,serif;font-style:italic;font-size:clamp(20px,3vw,30px);line-height:1.6;color:#ffffff;max-width:800px;margin:0 auto 12px;">
-    “I can do all things through Christ who strengthens me.”
-  </p>
-  <p style="font-size:13px;letter-spacing:3px;color:#c5a061;margin:0;">
-    PHILIPPIANS 4:13
-  </p>
+
+<section style="background:#061f38;padding:24px 0;overflow:hidden;">
+  <div style="text-align:center;color:#c5a061;font-size:12px;letter-spacing:3px;font-weight:bold;margin-bottom:15px;">
+    WORDS TO LIVE BY
+  </div>
+
+  <div class="brin-inspiration-ticker">
+    <div class="brin-inspiration-track">
+      <span>✝ “I can do all things through Christ who strengthens me.” — PHILIPPIANS 4:13</span>
+      <span>💙 She believed she could, so she did.</span>
+      <span>✝ JEREMIAH 29:11 — “For I know the plans I have for you,” declares the Lord.</span>
+      <span>💙 PAT SUMMITT — “Winning is not everything, but wanting to win is.”</span>
+      <span>✝ DIANA TAURASI — “I think the best part about being a female athlete is that we can inspire the next generation.”</span>
+      <span>💙 MAYA MOORE — “You have to be willing to put in the work to achieve your dreams.”</span>
+      <span>✝ CHERYL MILLER — “The only way to prove you are a good sport is to lose.”</span>
+    </div>
+  </div>
 </section>
+
+<style>
+.brin-inspiration-ticker {
+  width:100%;
+  overflow:hidden;
+  color:#ffffff;
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-size:19px;
+  line-height:1.7;
+}
+
+.brin-inspiration-track {
+  display:flex;
+  width:max-content;
+  gap:75px;
+  align-items:center;
+  animation:brinInspirationScroll 75s linear infinite;
+}
+
+.brin-inspiration-track span {
+  white-space:nowrap;
+}
+
+@keyframes brinInspirationScroll {
+  from { transform:translateX(100vw); }
+  to { transform:translateX(-100%); }
+}
+
+.brin-inspiration-ticker:hover .brin-inspiration-track {
+  animation-play-state:paused;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .brin-inspiration-track {
+    animation:none;
+    width:auto;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:0 20px;
+    gap:12px;
+  }
+  .brin-inspiration-track span {
+    white-space:normal;
+    text-align:center;
+  }
+}
+</style>
+
   <div style="height:3px;background:#c5a061;width:100%;"></div>
   <section id="about"><div class="wrap about"><div><div class="eyebrow">Meet the athlete</div><h2 style="font-size:50px;color:var(--navy);margin:10px 0">Brin <em style="font-family:Georgia,serif;color:var(--gold);font-weight:normal">Hart</em></h2>
 <p>Brin Hart is a Class of 2031 student-athlete attending Pulaski Academy, a college-preparatory school in Little Rock, Arkansas.  A dedicated point guard and shooting guard, Brin brings passion, determination, and a competitive spirit to everything she does.</p>
