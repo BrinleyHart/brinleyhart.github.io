@@ -372,25 +372,37 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
   </div>
 
 
+
+<!-- BRIN'S HOMEPAGE INSPIRATION TICKER -->
 <section style="background:#061f38;padding:24px 0;overflow:hidden;">
-  <div style="text-align:center;color:#c5a061;font-size:12px;letter-spacing:3px;font-weight:bold;margin-bottom:15px;">
+
+  <div style="text-align:center;color:#d5a651;font-size:17px;letter-spacing:3px;font-weight:bold;margin-bottom:15px;">
     WORDS TO LIVE BY
   </div>
 
   <div class="brin-inspiration-ticker">
     <div class="brin-inspiration-track">
-      <span>✝ “I can do all things through Christ who strengthens me.” — PHILIPPIANS 4:13</span>
-      <span>💙 She believed she could, so she did.</span>
-      <span>✝ JEREMIAH 29:11 — “For I know the plans I have for you,” declares the Lord.</span>
-      <span>💙 PAT SUMMITT — “Winning is not everything, but wanting to win is.”</span>
-      <span>✝ DIANA TAURASI — “I think the best part about being a female athlete is that we can inspire the next generation.”</span>
-      <span>💙 MAYA MOORE — “You have to be willing to put in the work to achieve your dreams.”</span>
-      <span>✝ CHERYL MILLER — “The only way to prove you are a good sport is to lose.”</span>
+
+      <span><b class="brin-cross">✝</b> “I can do all things through Christ who strengthens me.” — Philippians 4:13</span>
+
+      <span><b class="brin-heart">♥</b> She believed she could, so she did.</span>
+
+      <span><b class="brin-cross">✝</b> Jeremiah 29:11 — “For I know the plans I have for you,” declares the Lord.</span>
+
+      <span><b class="brin-heart">♥</b> Pat Summitt — “Winning is not everything, but wanting to win is.”</span>
+
+      <span><b class="brin-cross">✝</b> Diana Taurasi — “I think the best part about being a female athlete is that we can inspire the next generation.”</span>
+
+      <span><b class="brin-heart">♥</b> Maya Moore — “You have to be willing to put in the work to achieve your dreams.”</span>
+
+      <span><b class="brin-cross">✝</b> Cheryl Miller — “The only way to prove you are a good sport is to lose.”</span>
+
     </div>
   </div>
 </section>
 
 <style>
+/* Main ticker */
 .brin-inspiration-ticker {
   width:100%;
   overflow:hidden;
@@ -401,6 +413,7 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
   line-height:1.7;
 }
 
+/* Scrolling animation */
 .brin-inspiration-track {
   display:flex;
   width:max-content;
@@ -409,19 +422,48 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
   animation:brinInspirationScroll 75s linear infinite;
 }
 
+/* Individual quotes */
 .brin-inspiration-track span {
   white-space:nowrap;
 }
 
+/* Alternate quote colors */
+.brin-inspiration-track span:nth-child(odd) {
+  color:#ffffff;
+}
+
+.brin-inspiration-track span:nth-child(even) {
+  color:#78c4ed;
+}
+
+/* Gold crosses */
+.brin-inspiration-track .brin-cross {
+  color:#d5a651;
+  font-style:normal;
+  font-size:23px;
+  margin-right:8px;
+}
+
+/* Carolina blue hearts */
+.brin-inspiration-track .brin-heart {
+  color:#78c4ed;
+  font-style:normal;
+  font-size:23px;
+  margin-right:8px;
+}
+
+/* Scroll from right to left */
 @keyframes brinInspirationScroll {
   from { transform:translateX(100vw); }
   to { transform:translateX(-100%); }
 }
 
+/* Pause when hovering */
 .brin-inspiration-ticker:hover .brin-inspiration-track {
   animation-play-state:paused;
 }
 
+/* Accessibility */
 @media (prefers-reduced-motion:reduce) {
   .brin-inspiration-track {
     animation:none;
@@ -431,12 +473,15 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
     padding:0 20px;
     gap:12px;
   }
+
   .brin-inspiration-track span {
     white-space:normal;
     text-align:center;
   }
 }
 </style>
+<!-- END INSPIRATION TICKER -->
+
 
   <div style="height:3px;background:#c5a061;width:100%;"></div>
   <section id="about"><div class="wrap about"><div><div class="eyebrow">Meet the athlete</div><h2 style="font-size:50px;color:var(--navy);margin:10px 0">Brin <em style="font-family:Georgia,serif;color:var(--gold);font-weight:normal">Hart</em></h2>
