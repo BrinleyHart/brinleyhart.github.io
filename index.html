@@ -372,7 +372,6 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
   </div>
 
 
-
 <!-- BRIN'S HOMEPAGE INSPIRATION TICKER -->
 <section style="background:#061f38;padding:24px 0;overflow:hidden;">
 
@@ -397,7 +396,20 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
 <span><b class="brin-cross">✝</b> Maya Moore — “You have to be willing to put in the work to achieve your dreams.”</span>
 
 <span><b class="brin-heart">♥</b> Cheryl Miller — “The only way to prove you are a good sport is to lose.”</span>
+<!-- Duplicate quotes for seamless scrolling -->
+<span><b class="brin-heart">♥</b> “I can do all things through Christ who strengthens me.” – Philippians 4:13</span>
 
+<span><b class="brin-cross">✝</b> She believed she could, so she did.</span>
+
+<span><b class="brin-heart">♥</b> Jeremiah 29:11 – “For I know the plans I have for you,” declares the Lord.</span>
+
+<span><b class="brin-cross">✝</b> Pat Summitt – “Winning is not everything, but wanting to win is.”</span>
+
+<span><b class="brin-heart">♥</b> Diana Taurasi – “I think the best part about being a female athlete is that we can inspire the next generation.”</span>
+
+<span><b class="brin-cross">✝</b> Maya Moore – “You have to be willing to put in the work to achieve your dreams.”</span>
+
+<span><b class="brin-heart">♥</b> Cheryl Miller – “The only way to prove you are a good sport is to lose.”</span>
     </div>
   </div>
 </section>
@@ -416,11 +428,12 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
 
 /* Scrolling animation */
 .brin-inspiration-track {
-  display:flex;
-  width:max-content;
-  gap:75px;
-  align-items:center;
-  animation:brinInspirationScroll 75s linear infinite;
+    display:flex;
+    width:max-content;
+    gap:75px;
+    align-items:center;
+    animation:brinInspirationScroll 150s linear infinite;
+}
 }
 
 /* Individual quotes */
@@ -429,8 +442,14 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
 }
 
 /* Alternate quote colors */
-.brin-inspiration-track span:nth-child(odd) {
-  color:#ffffff;
+.brin-inspiration-track span:nth-child(14n+1),
+.brin-inspiration-track span:nth-child(14n+3),
+.brin-inspiration-track span:nth-child(14n+5),
+.brin-inspiration-track span:nth-child(14n+7),
+.brin-inspiration-track span:nth-child(14n+9),
+.brin-inspiration-track span:nth-child(14n+11),
+.brin-inspiration-track span:nth-child(14n+13) {
+    color:#ffffff;
 }
 
 .brin-inspiration-track span:nth-child(even) {
@@ -453,10 +472,10 @@ linear-gradient(110deg,#123b5b,#174b70);;color:white;min-height:560px;display:gr
   margin-right:8px;
 }
 
-/* Scroll from right to left */
+/* Continuous scrolling from right to left */
 @keyframes brinInspirationScroll {
-  from { transform:translateX(100vw); }
-  to { transform:translateX(-100%); }
+    from { transform:translateX(0); }
+    to { transform:translateX(calc(-50% - 37.5px)); }
 }
 
 /* Pause when hovering */
