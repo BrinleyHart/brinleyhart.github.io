@@ -2602,4 +2602,45 @@ height="570"
     : "https://www.youtube.com/@BrinHartBasketball";
 })();
 </script>
+<script>
+(async function loadApprovedEncouragement() {
+  const container = document.getElementById("approved-encouragement");
+  if (!container) return;
+
+  const url = "https://script.google.com/macros/s/AKfycbwB0c0wh6DZbcRz3eK8hSQLNXq7CRD4lBrFPTybcmmsv7aVt0t6dnWuS22Op8jQoYEN/exec";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Unable to load messages");
+
+    const data = await response.json();
+    const messages = Array.isArray(data.messages) ? data.messages : [];
+
+    if (messages.length === 0) return;
+
+    container.replaceChildren();
+
+    messages.forEach(item => {
+      const card = document.createElement("div");
+      card.style.cssText =
+        "background:#f5f8fc;border-left:4px solid #d5a651;" +
+        "padding:14px;margin-bottom:12px;border-radius:8px;";
+
+      const message = document.createElement("p");
+      message.style.cssText =
+        "color:#071f38;margin:0 0 8px;white-space:pre-wrap;";
+      message.textContent = item.message || "";
+
+      const name = document.createElement("strong");
+      name.style.color = "#176eaa";
+      name.textContent = "— " + (item.name || "Anonymous");
+
+      card.append(message, name);
+      container.appendChild(card);
+    });
+  } catch (error) {
+    console.error("Encouragement messages could not be loaded:", error);
+  }
+})();
+</script>
 </body></html>
