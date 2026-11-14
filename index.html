@@ -1671,12 +1671,21 @@ height="570"
 <div class="gallery" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start;">
 
   <!-- AAU BANSHEES ALBUM -->
-  <div style="text-align:center;">
+  
+<div style="text-align:center;">
+  <button type="button"
+    onclick="document.getElementById('banshees-photos').hidden = !document.getElementById('banshees-photos').hidden"
+    aria-label="Open or close Banshees Memories"
+    style="background:none;border:none;padding:0;width:100%;cursor:pointer;color:inherit;font:inherit;">
+
     <img src="banshees-album.png"
-         alt="Central and Northwest Arkansas Banshees Memories"
-         style="width:100%;height:auto;border-radius:14px;display:block;">
+      alt="Central and Northwest Arkansas Banshees Memories"
+      style="width:100%;height:auto;border-radius:14px;display:block;">
+
     <h3 style="margin-top:12px;">Banshees Memories</h3>
-  </div>
+  </button>
+</div>
+
 
   <!-- BEYOND BASKETBALL ALBUM -->
   <div style="text-align:center;">
