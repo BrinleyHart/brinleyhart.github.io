@@ -1686,14 +1686,20 @@ height="570"
   </button>
 </div>
 
-
   <!-- BEYOND BASKETBALL ALBUM -->
   <div style="text-align:center;">
+  <button type="button"
+    onclick="document.getElementById('beyond-photos').hidden = !document.getElementById('beyond-photos').hidden"
+    aria-label="Open or close Beyond Basketball Memories"
+    style="background:none;border:none;padding:0;width:100%;cursor:pointer;color:inherit;font:inherit;">
+
     <img src="beyond-basketball-album.png"
-         alt="Beyond Basketball - Family, Friends, Faith and Fun"
-         style="width:100%;height:auto;border-radius:14px;display:block;">
+      alt="Beyond Basketball - Family, Friends, Faith and Fun"
+      style="width:100%;height:auto;border-radius:14px;display:block;">
+
     <h3 style="margin-top:12px;">Beyond Basketball</h3>
-  </div>
+  </button>
+</div>
 
   <!-- PULASKI ACADEMY LADY BRUINS ALBUM -->
   <div style="text-align:center;">
@@ -1738,7 +1744,40 @@ height="570"
   </div>
 
 </div>
-    
+ <!-- BEYOND BASKETBALL PHOTO GALLERY -->
+<div id="beyond-photos" hidden
+style="max-width:950px;margin:25px auto;padding:25px;
+background:white;border:2px solid #e8d8f5;
+border-radius:16px;">
+
+<h2 style="text-align:center;color:#7441a0;">
+Beyond Basketball
+</h2>
+
+<p style="text-align:center;color:#555;">
+Life Outside the Court. Memories That Matter.
+</p>
+
+<!-- FAMILY, FRIENDS & FAITH -->
+<div style="margin-top:25px;padding:20px;
+background:#fce8f1;border-radius:12px;">
+<h3 style="color:#a43e76;">
+💕 Family, Friends & Faith
+</h3>
+<p>Memories Coming Soon!</p>
+</div>
+
+<!-- TRAVEL & FUN -->
+<div style="margin-top:20px;padding:20px;
+background:#e8f3ff;border-radius:12px;">
+<h3 style="color:#3268a2;">
+✈️ Travel & Fun
+</h3>
+<p>Memories Coming Soon!</p>
+</div>
+
+</div>
+   
 </div>
 </section>
 
