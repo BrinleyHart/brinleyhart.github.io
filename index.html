@@ -1223,41 +1223,40 @@ margin: 5px 0;
     </p>
 
 <!-- 2026–2027 SEASON AVERAGES -->
-<div style="background:#061f38;color:white;padding:25px 20px;border-radius:12px;margin-top:25px;text-align:center;">
+<div id="season-averages-2026" style="background:#061f38;color:white;padding:25px 20px;border-radius:12px;margin-top:25px;text-align:center;">
   <h3 style="color:#78c4f0;margin:0 0 8px;">2026–2027 SEASON AVERAGES</h3>
   <p style="color:#c5a061;margin:0 0 20px;">Brin Hart | #1 | PG / SG</p>
 
   <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:650px;margin:auto;">
-    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong style="font-size:24px;">11.5</strong><div style="color:#78c4f0;font-size:12px;">POINTS</div></div>
-    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong style="font-size:24px;">5.0</strong><div style="color:#78c4f0;font-size:12px;">REBOUNDS</div></div>
-    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong style="font-size:24px;">2.5</strong><div style="color:#78c4f0;font-size:12px;">ASSISTS</div></div>
-    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong style="font-size:24px;">5.0</strong><div style="color:#78c4f0;font-size:12px;">STEALS</div></div>
-    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong style="font-size:24px;">2.5</strong><div style="color:#78c4f0;font-size:12px;">BLOCKS</div></div>
-    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong style="font-size:24px;">5.5</strong><div style="color:#78c4f0;font-size:12px;">TURNOVERS</div></div>
+    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong id="avg-points" style="font-size:24px;">11.5</strong><div style="color:#78c4f0;font-size:12px;">POINTS</div></div>
+    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong id="avg-rebounds" style="font-size:24px;">5.0</strong><div style="color:#78c4f0;font-size:12px;">REBOUNDS</div></div>
+    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong id="avg-assists" style="font-size:24px;">2.5</strong><div style="color:#78c4f0;font-size:12px;">ASSISTS</div></div>
+    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong id="avg-steals" style="font-size:24px;">5.0</strong><div style="color:#78c4f0;font-size:12px;">STEALS</div></div>
+    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong id="avg-blocks" style="font-size:24px;">2.5</strong><div style="color:#78c4f0;font-size:12px;">BLOCKS</div></div>
+    <div style="background:#102a43;padding:15px 5px;border-radius:8px;"><strong id="avg-turnovers" style="font-size:24px;">5.5</strong><div style="color:#78c4f0;font-size:12px;">TURNOVERS</div></div>
   </div>
-
   
 <p style="color:white;margin:20px 0 10px;">
-  Games Played: 2 |
+  Games Played: <span id="season-games-played">2</span> |
   Team Record:
-  <span style="color:#4ade80;font-weight:bold;">1 WIN</span> –
-  <span style="color:#ff6b6b;font-weight:bold;">1 LOSS</span>
+  <span id="season-wins" style="color:#4ade80;font-weight:bold;">1 WIN</span> -
+  <span id="season-losses" style="color:#ff6b6b;font-weight:bold;">1 LOSS</span>
 </p>
 
 <p style="color:white;margin:5px 0;">
-  2PT: 7/16 (43.8%) &nbsp;·&nbsp; 3PT: 1/3 (33.3%)
+2PT: <span id="season-2pt">7/16 (43.8%)</span> &nbsp;&nbsp; 3PT: <span id="season-3pt">1/3 (33.3%)</span>
 </p>
 
 <p style="color:white;margin:5px 0;">
-  FT: 6/10 (60.0%)
+  FT: <span id="season-ft">6/10 (60.0%)</span>
 </p>
 
 <p style="color:#c5a061;margin:5px 0;">
-  Overall FG: 8/19 (42.1%)
+  Overall FG: <span id="season-fg">8/19 (42.1%)</span>
 </p>
 
 <p style="color:#78c4f0;font-size:12px;margin:10px 0 0;">
-  Season-to-date averages • Updated November 12, 2026
+ Season-to-date averages • Updated <span id="season-last-updated">November 12, 2026</span>
 </p>
 
 </div>
@@ -1266,7 +1265,8 @@ margin: 5px 0;
       <h3 style="color:#78c4f0;">2026–2027 GAME PERFORMANCE</h3>
       <p>Game-by-game performances from Brin's 2026–2027 basketball season.</p>  
 <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px;">
-<div id="stats-whitehall-nov9" style="scroll-margin-top:100px;background:#102a43;border:1px solid #c5a061;border-radius:10px;padding:20px;margin-top:20px;text-align:center;">
+<div id="stats-whitehall-nov9" class="season-game" data-date="2026-11-09" data-result="win" data-points="19" data-rebounds="6" data-assists="4" data-steals="9" data-blocks="2" data-turnovers="7" data-2pm="6" data-2pa="10" data-3pm="1" data-3pa="2" data-ftm="4" data-fta="8"
+ style="scroll-margin-top:100px;background:#102a43;border:1px solid #c5a061;border-radius:10px;padding:20px;margin-top:20px;text-align:center;">
 
   <h4 style="color:#78c4f0;margin:0 0 10px;">
     NOVEMBER 9, 2026 | WHITE HALL
@@ -1342,7 +1342,7 @@ margin: 5px 0;
 
 <!-- NOVEMBER 12, 2026 - SYLVAN HILLS GAME STATS -->
 
-<div id="stats-sylvan-hills-nov12"
+<div id="stats-sylvan-hills-nov12" class="season-game" data-date="2026-11-12" data-result="loss" data-points="4" data-rebounds="4" data-assists="1" data-steals="1" data-blocks="3" data-turnovers="4" data-2pm="1" data-2pa="6" data-3pm="0" data-3pa="1" data-ftm="2" data-fta="2"
      style="scroll-margin-top:100px;background:#102a43;border:1px solid #c5a061;border-radius:10px;padding:20px;margin-top:20px;text-align:center;">
 
   <h4 style="color:#78c4f0;margin:0 0 10px;">
@@ -3015,5 +3015,86 @@ background:#e8f3ff;border-radius:12px;">
     console.error("Encouragement messages could not be loaded:", error);
   }
 })();
+</script>
+<script id="brin-season-calculator">
+
+(function () {
+  function updateSeasonStats() {
+    const games = [...document.querySelectorAll(".season-game")];
+    if (!games.length) return;
+
+    const totals = {
+      points: 0, rebounds: 0, assists: 0,
+      steals: 0, blocks: 0, turnovers: 0,
+      "2pm": 0, "2pa": 0,
+      "3pm": 0, "3pa": 0,
+      ftm: 0, fta: 0
+    };
+
+    let wins = 0;
+    let losses = 0;
+    let latestDate = "";
+
+    games.forEach(game => {
+      Object.keys(totals).forEach(stat => {
+        totals[stat] += Number(game.dataset[stat]) || 0;
+      });
+
+      if (game.dataset.result === "win") wins++;
+      if (game.dataset.result === "loss") losses++;
+
+      if (game.dataset.date > latestDate) {
+        latestDate = game.dataset.date;
+      }
+    });
+
+    const count = games.length;
+
+    function setText(id, value) {
+      const element = document.getElementById(id);
+      if (element) element.textContent = value;
+    }
+
+    ["points", "rebounds", "assists", "steals", "blocks", "turnovers"]
+      .forEach(stat => {
+        setText("avg-" + stat, (totals[stat] / count).toFixed(1));
+      });
+
+    function shooting(made, attempted) {
+      const percentage = attempted
+        ? (made / attempted * 100).toFixed(1)
+        : "0.0";
+      return `${made}/${attempted} (${percentage}%)`;
+    }
+
+    setText("season-games-played", count);
+    setText("season-wins", `${wins} ${wins === 1 ? "WIN" : "WINS"}`);
+    setText("season-losses", `${losses} ${losses === 1 ? "LOSS" : "LOSSES"}`);
+
+    setText("season-2pt", shooting(totals["2pm"], totals["2pa"]));
+    setText("season-3pt", shooting(totals["3pm"], totals["3pa"]));
+    setText("season-ft", shooting(totals.ftm, totals.fta));
+
+    const fgMade = totals["2pm"] + totals["3pm"];
+    const fgAttempted = totals["2pa"] + totals["3pa"];
+    setText("season-fg", shooting(fgMade, fgAttempted));
+
+    if (latestDate) {
+      const [year, month, day] = latestDate.split("-").map(Number);
+      const formatted = new Date(year, month - 1, day)
+        .toLocaleDateString("en-US", {
+          month: "long", day: "numeric", year: "numeric"
+        });
+      setText("season-last-updated", formatted);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", updateSeasonStats);
+  } else {
+    updateSeasonStats();
+  }
+})();
+
 </script>
 </body></html>
